@@ -1,0 +1,6 @@
+micro : 
+	profiles : dev
+	des : "test"
+config-test :
+	name : spring-hello
+	des : this is my des
