@@ -13,7 +13,7 @@ import com.spring.boot.test.profile.SuperBean;
  * @date 2017年7月14日
  * @description : 
  */
-@Configuration
+//@Configuration
 public class JavaConfig {
 
 	@Bean
