@@ -12,8 +12,8 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  * @date 2017年7月14日
  * @description : 
  */
-@Configuration
-@EnableAsync
+//@Configuration
+//@EnableAsync
 public class JavaConfig {
 
 	// 此taskExecutor可以不注入照样Async注解生效，有默认值

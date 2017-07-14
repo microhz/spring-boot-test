@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.boot.test.async.AsyncBean;
+import com.spring.boot.test.exceptionHandler.MyException;
 import com.spring.boot.test.profile.SuperBean;
 
 
@@ -71,7 +72,7 @@ public class ApplicationBoot {
 		return "test";
 	}
 	*/
-	
+	/*
 	@Autowired
 	private AsyncBean asyncBean;
 	@PostConstruct
@@ -79,7 +80,7 @@ public class ApplicationBoot {
 		asyncBean.syncMethod();
 		System.out.println("main thread is running...");
 		return "test async";
-	}
+	}*/
 	
 	
 	// 在本类中无效
@@ -94,4 +95,15 @@ public class ApplicationBoot {
 		}
 	}*/
 	
+	
+	/**
+	 * 测试controller ex处理
+	 * @throws MyException 
+	 */
+	@RequestMapping("ex")
+	public Object ex() throws MyException {
+		System.out.println("do something");
+		throw new MyException("this is stack msg");
+	}
 }
+
