@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.boot.test.async.AsyncBean;
@@ -100,10 +101,20 @@ public class ApplicationBoot {
 	 * 测试controller ex处理
 	 * @throws MyException 
 	 */
-	@RequestMapping("ex")
+	/*@RequestMapping("ex")
 	public Object ex() throws MyException {
 		System.out.println("do something");
 		throw new MyException("this is stack msg");
+	}*/
+	
+	/**
+	 * 测试 shiro
+	 */
+	@RequestMapping("login")
+	public Object login(@RequestParam("username") String name,
+			@RequestParam("password") String pwd) {
+		System.out.println(name + " " + pwd);
+		return "test shiro";
 	}
 }
 
