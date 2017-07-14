@@ -110,11 +110,11 @@ public class ApplicationBoot {
 	/**
 	 * 测试 shiro
 	 */
-	@RequestMapping("login")
+	/*@RequestMapping("login")
 	public Object login(@RequestParam("username") String name,
 			@RequestParam("password") String pwd) {
 		System.out.println(name + " " + pwd);
 		return "test shiro";
-	}
+	}*/
 }
 

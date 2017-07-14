@@ -1,8 +1,8 @@
 package com.spring.boot.test.shiro;
 
-import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
-import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+//import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
+//import org.apache.shiro.subject.PrincipalCollection;
+//import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
@@ -16,17 +16,17 @@ import java.util.Map;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.SimpleAccount;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.authz.AuthorizationInfo;
-import org.apache.shiro.authz.Authorizer;
-import org.apache.shiro.mgt.SecurityManager;
-import org.apache.shiro.realm.Realm;
-import org.apache.shiro.realm.SimpleAccountRealm;
-import org.apache.shiro.session.mgt.SessionManager;
+//import org.apache.shiro.authc.AuthenticationException;
+//import org.apache.shiro.authc.AuthenticationInfo;
+//import org.apache.shiro.authc.AuthenticationToken;
+//import org.apache.shiro.authc.SimpleAccount;
+//import org.apache.shiro.authc.UsernamePasswordToken;
+//import org.apache.shiro.authz.AuthorizationInfo;
+//import org.apache.shiro.authz.Authorizer;
+//import org.apache.shiro.mgt.SecurityManager;
+//import org.apache.shiro.realm.Realm;
+//import org.apache.shiro.realm.SimpleAccountRealm;
+//import org.apache.shiro.session.mgt.SessionManager;
 
 /**
  * @author micro
@@ -36,7 +36,7 @@ import org.apache.shiro.session.mgt.SessionManager;
 @Configuration
 public class SpringShiroAutoConfig {
 	
-	@Bean
+	/*@Bean
 	public ServletContextInitializer contentInit() {
 		return new ServletContextInitializer() {
 			
@@ -100,10 +100,10 @@ public class SpringShiroAutoConfig {
 	@Bean
 	public SessionManager sessionManager() {
 		return new DefaultWebSecurityManager();
-	}
+	}*/
 }
 
-class MyReal extends SimpleAccountRealm {
+/*class MyReal extends SimpleAccountRealm {
 
 	// protected就是给子类重写的
 	// 访问的认证并返回信息 
@@ -128,4 +128,4 @@ class MyReal extends SimpleAccountRealm {
 		return null;
 	}
 	
-}
+}*/
