@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author mapc 
  * @date 2017年7月15日
  */
-@RestController
+//@RestController
 public class MongoTest {
 	
 	@PostConstruct

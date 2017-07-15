@@ -15,12 +15,12 @@ public class TestController {
 	
 	@PostConstruct
 	public void init() {
-		System.out.println("**************************************");
+		/*System.out.println("**************************************");
 		try {
 			Thread.sleep(3000L);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	@RequestMapping("test")

@@ -22,6 +22,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import com.spring.boot.test.async.AsyncBean;
 import com.spring.boot.test.exceptionHandler.MyException;
 import com.spring.boot.test.profile.SuperBean;
+import com.sun.xml.internal.txw2.IllegalAnnotationException;
 
 
 /**
@@ -44,6 +45,11 @@ public class ApplicationBoot {
 		return "ok";
 	}
 	
+	
+	@RequestMapping("/throw")
+	public Object testAspectJThrow() {
+		return new IllegalAnnotationException("非法注解");
+	}
 	/*@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
