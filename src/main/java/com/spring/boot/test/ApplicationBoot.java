@@ -48,7 +48,7 @@ public class ApplicationBoot {
 	
 	@RequestMapping("/throw")
 	public Object testAspectJThrow() {
-		return new IllegalAnnotationException("非法注解");
+		throw new IllegalAnnotationException("非法注解");
 	}
 	/*@Autowired
 	private JdbcTemplate jdbcTemplate;

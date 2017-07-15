@@ -25,11 +25,11 @@ public class TestController {
 
 	@RequestMapping("test")
 	public void test() {
-		System.out.println("**************************************");
+		/*System.out.println("**************************************");
 		try {
 			Thread.sleep(10000L);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 }

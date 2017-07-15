@@ -34,7 +34,7 @@ public class ControllerLogAspect {
 	}
 	
 	@Around("execution(* com.spring.boot.test.*.*(..))")
-	public void arount(ProceedingJoinPoint proceedingJoinPoint) {
+	public void arount(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 		System.out.println("around before");
 		StringBuilder sb = new StringBuilder();
 		int i = 0;
@@ -48,6 +48,7 @@ public class ControllerLogAspect {
 			System.out.println("around after " + ret);
 		} catch (Throwable e) {
 			e.printStackTrace();
+			throw e;// 如果这里不抛出，afterThrow捕捉不到
 		}
 		
 	}
