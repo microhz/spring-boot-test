@@ -36,7 +36,7 @@ public class MongoTest {
 		User user = new User();
 		user.setId(1L);
 		user.setName("micro");
-		userDao.save(user);
+//		userDao.save(user);
 		
 		// ---- find
 		User user2 = userDao.getUserByName("micro");

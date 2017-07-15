@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2017年7月15日
  * @description : 
  */
-@Configuration
+//@Configuration
 public class ProductConfig {
 
 	@Bean

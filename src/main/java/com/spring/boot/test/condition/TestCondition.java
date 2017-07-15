@@ -16,7 +16,7 @@ import com.apple.eawt.Application;
  * @date 2017年7月15日
  * @description : 
  */
-@Component
+//@Component
 public class TestCondition implements ApplicationContextAware {
 
 	private ApplicationContext application;
