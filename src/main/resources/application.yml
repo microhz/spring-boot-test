@@ -6,11 +6,6 @@ server :
 ---
 spring :
     profiles : dev
-    data : 
-       mongodb :
-         host : 115.126.86.143
-         port : 27017
-         database : test
 server : 
     port : 8080
 ---

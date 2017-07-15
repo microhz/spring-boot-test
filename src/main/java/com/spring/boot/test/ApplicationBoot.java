@@ -14,6 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,6 +33,7 @@ import com.sun.xml.internal.txw2.IllegalAnnotationException;
  */
 @RestController // 有这个配置返回参数自动JSON
 @SpringBootApplication
+@EnableScheduling
 public class ApplicationBoot {
 
 	public static void main(String[] args) {
