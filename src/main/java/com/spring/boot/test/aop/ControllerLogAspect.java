@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
  * @date 2017年7月15日
  * @description : 
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class ControllerLogAspect {
 
 	

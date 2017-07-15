@@ -33,7 +33,7 @@ import com.sun.xml.internal.txw2.IllegalAnnotationException;
  */
 @RestController // 有这个配置返回参数自动JSON
 @SpringBootApplication
-@EnableScheduling
+//@EnableScheduling
 public class ApplicationBoot {
 
 	public static void main(String[] args) {
