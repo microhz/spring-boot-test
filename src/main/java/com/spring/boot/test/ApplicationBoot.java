@@ -1,4 +1,5 @@
 package com.spring.boot.test;
+
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -7,13 +8,16 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.spring.boot.test.async.AsyncBean;
 import com.spring.boot.test.exceptionHandler.MyException;
@@ -31,8 +35,13 @@ public class ApplicationBoot {
 
 	public static void main(String[] args) {
 		SpringApplication springApplication = new SpringApplication(ApplicationBoot.class);
-		springApplication.setAdditionalProfiles("pub"); // 注入dev环境下的
+//		springApplijcation.setAdditionalProfiles("dev"); // 注入dev环境下的
 		springApplication.run(args);
+	}
+	
+	@RequestMapping("/")
+	public Object test() {
+		return "ok";
 	}
 	
 	/*@Autowired
@@ -116,5 +125,7 @@ public class ApplicationBoot {
 		System.out.println(name + " " + pwd);
 		return "test shiro";
 	}*/
+	
 }
+
 
