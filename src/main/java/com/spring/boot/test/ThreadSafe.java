@@ -24,9 +24,6 @@ public class ThreadSafe {
 		}
 		// size2不递增
 		System.out.println(size2.get());
-		
-		
-		
 	}
 	
 	@RequestMapping("unsafe")
