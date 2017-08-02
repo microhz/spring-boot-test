@@ -1,8 +1,17 @@
 spring : 
+    profiles : default
     application :
-       name : ss-mongo
-server : 
-    port : 8081
+       name : spring-boot-server
+server :
+    port : 8761
+eureka : 
+    client : 
+       registerWithEureka : false
+       fetchRegistry : false
+       serviceUrl : 
+          defaultZone : http://localhost:8761/eureka/
+    instance :
+       preferIpAddress : true
 ---
 spring :
     profiles : dev
@@ -16,4 +25,4 @@ server :
 ---
 spring :
     profiles :
-       active : dev
+       active : default

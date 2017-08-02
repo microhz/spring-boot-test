@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -35,7 +36,8 @@ import com.sun.xml.internal.txw2.IllegalAnnotationException;
 @SpringBootApplication
 @EnableWebMvc
 //@EnableScheduling
-public class ApplicationBoot {
+//@EnableAsync
+public class ApplicationBoot implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication springApplication = new SpringApplication(ApplicationBoot.class);
@@ -61,6 +63,15 @@ public class ApplicationBoot {
 		List<Map<String, Object>> resultList = jdbcTemplate.queryForList("SELECT * FROM user_parent_basic_info LIMIT 1,10");
 		return resultList;
 	}*/
+
+	@Autowired
+	private AsyncBean asyncBean;
+	
+	@Override
+	public void run(String... args) throws Exception {
+		/*asyncBean.syncMethod();
+		System.out.println("---------- 调用线程没被阻塞 -------");*/
+	}
 	
 	/*@Autowired
 	private ParentRepository parentRepository;
