@@ -8,13 +8,13 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.filter.DelegatingFilterProxy;
+//import org.springframework.web.filter.DelegatingFilterProxy;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
+//import javax.servlet.ServletContext;
+//import javax.servlet.ServletException;
 
 //import org.apache.shiro.authc.AuthenticationException;
 //import org.apache.shiro.authc.AuthenticationInfo;

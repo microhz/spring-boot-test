@@ -1,5 +1,0 @@
-spring : 
-   activemq : 
-      broker-url : tcp://115.126.86.143:61616
-      user : admin
-      password : admin

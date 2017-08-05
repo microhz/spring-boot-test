@@ -2,16 +2,19 @@ spring :
     profiles : default
     application :
        name : spring-boot-server
+    datasource : 
+       url : jdbc:mysql://115.126.86.143/songshare?useUnicode=true&characterEncoding=utf8
+       username : root
+       password : root
+    driver-class-name : com.mysql.jdbc.Driver
+    jpa :
+       properties :
+         hibernate :
+            hbm2ddl :
+               auto : validate
+            dialect : org.hibernate.dialect.MySQLDialect
 server :
     port : 8761
-eureka : 
-    client : 
-       registerWithEureka : false
-       fetchRegistry : false
-       serviceUrl : 
-          defaultZone : http://localhost:8761/eureka/
-    instance :
-       preferIpAddress : true
 ---
 spring :
     profiles : dev
